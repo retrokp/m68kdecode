@@ -167,7 +167,7 @@ impl<'a> CodeStream<'a> {
 
     fn decode_extended_ea(&mut self, src_reg: Option<AddressRegister>) -> Operand {
         let pc_off = self.pos as u8;
-        println!("decode_extended_ea: pc_off={}", pc_off);
+        //println!("decode_extended_ea: pc_off={}", pc_off);
         let ext = self.pull16();
         let scale = get_bits(ext, 9, 2) as u8;
         let idx = get_bits(ext, 12, 3);
